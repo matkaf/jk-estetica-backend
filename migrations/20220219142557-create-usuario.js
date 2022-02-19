@@ -17,11 +17,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
-      username: {
-        allowNull: false,
-        type: Sequelize.STRING,
-        unique: true,
-      }
     });
   },
   async down(queryInterface, Sequelize) {

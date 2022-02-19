@@ -1,17 +1,22 @@
-## Passo a passo de preparação do ambiente do projeto:
+# Passo a passo de preparação do ambiente do projeto:
 
-1 - `npm init` - iniciar a aplicação instalando o npm;
-2 - `npm install sequelize sequelize-cli express dotenv` - instala Sequelize, express e dotenv;
-3 - `npm install pg pg-hstore` ou `mysql2` - instala recursos de PostGres (supabase) ou MySQL;
-4 - `npm install -D nodemon` - instala o nodemon como dependencia dev;
-5 - `npm install jsonwebtoken` - instala o JSONWebToken para auth de usuarios;
-6 - `npx sequelize-cli init` - cria as models/migrations e seeders;
+1. `npm init` - iniciar a aplicação instalando o npm;
+
+2. `npm install sequelize sequelize-cli express dotenv` - instala Sequelize, express e dotenv;
+
+3. `npm install pg pg-hstore` ou `mysql2` - instala recursos de PostGres (supabase) ou MySQL;
+
+4. `npm install -D nodemon` - instala o nodemon como dependencia dev;
+
+5. `npm install jsonwebtoken` - instala o JSONWebToken para auth de usuarios;
+
+6. `npx sequelize-cli init` - cria as models/migrations e seeders;
 
 ## Configuração do Sequelize:
 
 <!-- OBS: alterar arquivo models/index.js para procurar o config.js -->
-
 <!-- config/config.js -->
+```
 require('dotenv/config');
 
 const { HOST, PASSWORD_POSTGRES, DATABASE, DB_USERNAME, DB_PORT } = process.env;
@@ -42,6 +47,7 @@ module.exports = {
     "dialect": "postgres"
   }
 }
+```
 <!-- config/config.js -->
 
 ## Configuração do arquivo .env:
