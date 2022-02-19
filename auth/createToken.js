@@ -9,7 +9,7 @@ const createToken = (data) => {
     expiresIn: '30d',
   }
 
-  const token = (data) => jwt.sign({ data }, secret, config);
+  const token = jwt.sign({ data }, secret, config)
 
   return token;
 }  

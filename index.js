@@ -1,6 +1,6 @@
 const express = require('express');
 const clientes = require('./routes/clientes');
-const cadastro = require('./routes/cadastro');
+const admin = require('./routes/admin');
 
 const app = express();
 
@@ -12,4 +12,4 @@ app.listen(PORT, () => console.log(`Rodando na porta ${PORT}`));
 
 app.use('/clientes', clientes);
 
-app.use('/cadastro', cadastro);
+app.use('/admin', admin);
