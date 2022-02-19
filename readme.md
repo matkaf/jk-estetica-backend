@@ -3,7 +3,8 @@
 1 - `npm init` - iniciar a aplicação instalando o npm;
 2 - `npm install sequelize sequelize-cli express dotenv` - instala Sequelize, express e dotenv;
 3 - `npm install pg pg-hstore` ou `mysql2` - instala recursos de PostGres (supabase) ou MySQL;
-4 - `npx sequelize-cli init` - cria as models/migrations e seeders;
+4 - `npm install -D nodemon` - instala o nodemon como dependencia dev;
+5 - `npx sequelize-cli init` - cria as models/migrations e seeders;
 
 ## Configuração do Sequelize:
 

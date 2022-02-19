@@ -4,6 +4,7 @@
   "description": "1 - `npm init` - iniciar a aplicação instalando o npm; 2 - `npm install sequelize sequelize-cli express dotenv` - instala Sequelize, express e dotenv; 3 - `npm install pg pg-hstore` - instala recursos de PostGres (supabase);",
   "main": "index.js",
   "scripts": {
+    "debug": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -15,5 +16,8 @@
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.16.2",
     "sequelize-cli": "^6.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
