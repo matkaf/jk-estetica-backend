@@ -18,10 +18,10 @@ module.exports = {
       },
       dataNascimento: {
         allowNull: false,
-        type: Sequelize.DATE,
+        type: Sequelize.DATEONLY,
       },
       celular: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         unique: true,
       },
     });

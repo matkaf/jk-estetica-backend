@@ -2,6 +2,7 @@ const Cliente = require('../services/cliente');
 
 const create = async (req, res) => {
   const info = req.body;
+  console.log('req.body:', info);
   const novoCliente = await Cliente.create(info);
 
   if (novoCliente.status) return res.status(novoCliente.status).json({ message: novoCliente.message });
