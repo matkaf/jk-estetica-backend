@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
     nomeCompleto: DataTypes.STRING,
     sexo: DataTypes.STRING,
     dataNascimento: DataTypes.DATE,
-    celular: DataTypes.INTEGER,
+    celular: DataTypes.STRING,
   }, {
     timestamps: false,
   });

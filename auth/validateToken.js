@@ -15,7 +15,7 @@ module.exports = async (req, res, next) => {
   try {
     const decoded = jwt.verify(token, secret);
 
-    const user = await Usuario.findOne({ where: {email: decoded.data.email }});
+    const user = await Usuario.findOne({ where: { email: decoded.data.email }});
 
     if (!user) {
       return res.status(401).json({ message: 'Erro ao procurar usuário do token' })
