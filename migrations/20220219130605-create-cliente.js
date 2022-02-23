@@ -1,10 +1,6 @@
 'use strict';
-const dateWithNoTZ = require('sequelize-date-no-tz-postgres');
-
 module.exports = {
-  async up(queryInterface, SequelizeBase) {
-  const Sequelize = dateWithNoTZ(SequelizeBase);
-
+  async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Clientes', {
       id: {
         allowNull: false,
@@ -22,7 +18,7 @@ module.exports = {
       },
       dataNascimento: {
         allowNull: false,
-        type: Sequelize.DATE_NO_TZ,
+        type: Sequelize.DATEONLY,
       },
       celular: {
         type: Sequelize.STRING,
