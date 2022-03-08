@@ -12,6 +12,8 @@
 
 6. `npx sequelize-cli init` - cria as models/migrations e seeders;
 
+7. `npm install cors` - habilita requisições CORS;
+
 ## Configuração do Sequelize:
 
 <!-- OBS: alterar arquivo models/index.js para procurar o config.js -->
