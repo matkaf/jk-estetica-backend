@@ -1,65 +1,34 @@
-# Passo a passo de preparação do ambiente do projeto:
 
-1. `npm init` - iniciar a aplicação instalando o npm;
+# JK Estética [Back-End]
 
-2. `npm install sequelize sequelize-cli express dotenv` - instala Sequelize, express e dotenv;
+Essa API foi criada para alimentar um banco de dados de cadastro de clientes de um clínica de estética. O projeto foi feito em Node.js, com javascript e o banco de dados escolhido foi o PostGresSQL, por conta do Supabase. Esse é o esqueleto do DB:
 
-3. `npm install pg pg-hstore` ou `mysql2` - instala recursos de PostGres (supabase) ou MySQL;
+![DB Diagram](./dbjk)
 
-4. `npm install -D nodemon` - instala o nodemon como dependencia dev;
 
-5. `npm install jsonwebtoken` - instala o JSONWebToken para auth de usuarios;
+<!-- ## Documentação da API
 
-6. `npx sequelize-cli init` - cria as models/migrations e seeders;
+#### Retorna todos os itens
 
-7. `npm install cors` - habilita requisições CORS;
-
-## Configuração do Sequelize:
-
-<!-- OBS: alterar arquivo models/index.js para procurar o config.js -->
-<!-- config/config.js -->
+```http
+  GET /clientes
 ```
-require('dotenv/config');
 
-const { HOST, PASSWORD_POSTGRES, DATABASE, DB_USERNAME, DB_PORT } = process.env;
+| Parâmetro   | Tipo       | Descrição                           |
+| :---------- | :--------- | :---------------------------------- |
+| `api_key` | `string` | **Obrigatório**. A chave da sua API |
 
-module.exports = {
-  "development": {
-    "username": DB_USERNAME,
-    "password": PASSWORD_POSTGRES,
-    "database": DATABASE,
-    "host": HOST,
-    "port": DB_PORT,
-    "dialect": "postgres"
-  },
-  "test": {
-    "username": DB_USERNAME,
-    "password": PASSWORD_POSTGRES,
-    "database": DATABASE,
-    "host": HOST,
-    "port": DB_PORT,
-    "dialect": "postgres"
-  },
-  "production": {
-    "username": DB_USERNAME,
-    "password": PASSWORD_POSTGRES,
-    "database": DATABASE,
-    "host": HOST,
-    "port": DB_PORT,
-    "dialect": "postgres"
-  }
-}
+#### Retorna um item
+
+```http
+  GET /api/items/${id}
 ```
-<!-- config/config.js -->
 
-## Configuração do arquivo .env:
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `string` | **Obrigatório**. O ID do item que você quer |
 
-PASSWORD_POSTGRES= # aqui vai ser a senha que você criou
-HOST= # o link para onde o banco está hospedado
-DATABASE=postgres
-DB_USERNAME=postgres
-DB_PORT= # porta que o Supabase fornece
+#### add(num1, num2)
 
-## Criando os models e migrations, conforme solicitado;
-
-## Criar as rotas GET e POST necessárias para procurar/registrar dados;
+Recebe dois números e retorna a sua soma.
+ -->
