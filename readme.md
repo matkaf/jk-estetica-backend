@@ -3,7 +3,7 @@
 
 Essa API foi criada para alimentar um banco de dados de cadastro de clientes de um clínica de estética. O projeto foi feito em Node.js, com javascript e o banco de dados escolhido foi o PostGresSQL, por conta do Supabase. Esse é o esqueleto do DB:
 
-![DB Diagram](./dbjk)
+![DB Diagram](./dbjk.png)
 
 
 <!-- ## Documentação da API
