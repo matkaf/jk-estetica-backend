@@ -6,7 +6,7 @@ Essa API foi criada para alimentar um banco de dados de cadastro de clientes de 
 ![DB Diagram](./dbjk)
 
 
-## Documentação da API
+<!-- ## Documentação da API
 
 #### Retorna todos os itens
 
@@ -31,3 +31,4 @@ Essa API foi criada para alimentar um banco de dados de cadastro de clientes de 
 #### add(num1, num2)
 
 Recebe dois números e retorna a sua soma.
+ -->
